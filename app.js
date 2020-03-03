@@ -5,18 +5,20 @@ var score = [0, 0];
 //Toglogchiin eeljindee tsugluulsan onoog hadgalah huwisagch
 var roundScore = 0;
 //Shoonii ali talaaraa buusaniig hadgalah huwisagch 1-6 gesn utgiig ene huwisagchid sanamsargui uisgej ugnu
-var dice = Math.floor(Math.random() * 6) + 1;
-//window.document.querySelector("#score-0").textContent = dice;
-
-//document.querySelector("#score-1").innerHTML = "<em>Yes!</em>";
+var diceNumber = Math.floor(Math.random() * 6) + 1;
 
 //Program ehlehed beldey
-document.querySelector("#score-0").textContent = 0;
-document.querySelector("#score-1").textContent = 0;
+document.getElementById("score-0").textContent = "0";
+document.getElementById("score-1").textContent = "0";
 
-document.querySelector("#current-0").textContent = 0;
-document.querySelector("#current-1").textContent = 0;
+document.getElementById("current-0").textContent = "0";
+document.getElementById("current-1").textContent = "0";
 
-document.querySelector(".dice").style.display = "none";
+var diceDom = document.querySelector(".dice");
+diceDom.style.display = "none";
 
-console.log("Shoo:  " + dice);
+document.querySelector(".btn-roll").addEventListener("click", function() {
+  var diceNumber = Math.floor(Math.random() * 6) + 1;
+  diceDom.style.display = "block";
+  diceDom.src = "dice-" + diceNumber + ".png";
+});
