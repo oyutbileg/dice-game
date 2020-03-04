@@ -66,7 +66,7 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
     //Hojson esehiig shalgah
     document.getElementById("score-" + activePlayer).textContent =
       score[activePlayer];
-    if (score[activePlayer] >= 15) {
+    if (score[activePlayer] >= 100) {
       //togloomiig duussan tuluwd oruulna
       isNewGame = false;
       document.getElementById("name-" + activePlayer).textContent =
